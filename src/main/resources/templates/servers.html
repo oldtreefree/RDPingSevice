@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Блок сайта</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<header th:insert="blocks/header :: header" ></header>
+<header th:insert="blocks/module :: module" ></header>
+
+<div th:each="el : ${servers}" class="alert alert-info mt-2">
+
+
+<code></code>
+
+    <ul class="navbar navbar-expand">
+        <li class="nav-link" th:text="'IP адрес: ' + ${el.ip_address}"/>
+        <li class="nav-link" th:text="'Модуль: ' + ${el.module}"/>
+        <a class="nav-link" th:href="'/server/' + ${el.id}">Детальней</a>
+    </ul>
+
+</div>
+
+
+    <div class="container mt-5">
+        <h1>Блок сайта</h1>
+    </div>
+
+</body>
+</html>

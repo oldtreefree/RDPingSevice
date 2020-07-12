@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Блок сайта</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<header th:insert="blocks/header :: header" ></header>
+<header th:insert="blocks/module :: module" ></header>
+
+
+<div class="container mt-5 mb-5">
+    <h1>Добавление сервера</h1>
+    <form action="/addserver" method="post"><br>
+        <input type="text" name="ip_address" placeholder="Введите IP сервера" class="form-control"><br>
+        <input type="text" name="module" placeholder="Модуль сервера" class="form-control"><br>
+        <button type="submit" class="btn btn-success">Добавить сервер</button><br>
+    </form>
+</div>
+
+</body>
+</html>
+

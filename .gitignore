@@ -1,0 +1,6 @@
+/src/test/
+.idea
+*.iml
+target
+gen
+/.idea/
